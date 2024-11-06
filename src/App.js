@@ -1,6 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
+import Home from "./pages/Home";
+
 import Header from "./components/Header/Header";
 
 import Footer from "./components/Footer/Footer";
@@ -11,7 +13,7 @@ const App = () => {
       <Header />
       <main className="py-3">
         <Container>
-          <h2>ZDK Market</h2>
+          <Home />
         </Container>
       </main>
       <Footer />
