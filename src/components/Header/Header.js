@@ -1,18 +1,31 @@
 import React from "react";
 
+import { LinkContainer } from "react-router-bootstrap";
+
 import { Container, Navbar, Nav } from "react-bootstrap";
 
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
       <Navbar className="nav-bg " variant="dark">
         <Container>
-          <Navbar.Brand href="/">ZDK Market</Navbar.Brand>
+          <LinkContainer to="/">
+            <Navbar.Brand>ZDK Market</Navbar.Brand>
+          </LinkContainer>
           <Nav>
-            <Nav.Link href="/card">Shopping List</Nav.Link>
-            <Nav.Link href="account">Account</Nav.Link>
+            <LinkContainer to="/cart">
+              <Nav.Link>
+                <i className="fa fa-shopping-cart"></i>
+              </Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/account">
+              <Nav.Link>
+                <i className="fa fa-user"></i>
+              </Nav.Link>
+            </LinkContainer>
           </Nav>
         </Container>
       </Navbar>
