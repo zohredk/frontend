@@ -5,7 +5,6 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
 import "./Header.css";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
