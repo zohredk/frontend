@@ -1,3 +1,4 @@
+// reducer/cartReducer.js
 export const cartReducer = (state = { cartItems: [] }, action) => {
   switch (action.type) {
     case "CART_ADD_ITEM":
@@ -20,6 +21,11 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
           cartItems: [...state.cartItems, item],
         };
       }
+    case "CART_REMOVE_ITEM": // Ensure this matches the action type
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((i) => i.product !== action.payload), // Ensure state.cartItems
+      };
     default:
       return state;
   }
